@@ -1,19 +1,18 @@
 <template>
-  <router-view />
+  <Layout>
+    <div>
+      <PiniaLogo />
+    </div>
+  </Layout>
 </template>
 
-<script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+<script lang="ts" setup>
+import Layout from '@/components/Layout/index.vue'
+import PiniaLogo from '@/components/PiniaLogo.vue'
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped lang="less">
+body {
+  margin: 0!important;
 }
 </style>

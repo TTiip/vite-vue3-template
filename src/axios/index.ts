@@ -8,7 +8,6 @@ import axios, {
 } from 'axios'
 import apiList, { apiKeyType, apiKeyDataType } from '@/api'
 import useMessage from '@/hooks/useMessage'
-import store from '@/store'
 
 type ResultDataType = apiKeyDataType[apiKeyType]
 /*
@@ -81,7 +80,6 @@ instance.interceptors.request.use(
       // 先设置为false，之后在改。
       request.headers.showLoading = false
     }
-    request.headers.showLoading && store.commit('setLoading', true)
     removePending(request)
     if (request.method && HAS_QS_METHOD.includes(request.method)) {
       // 这里只处理post请求，根据自己情况修改
@@ -109,7 +107,6 @@ instance.interceptors.request.use(
 // 添加响应拦截器
 instance.interceptors.response.use(
   (response) => {
-    store.commit('setLoading', false)
     removePending(response.config)
 
     const code = response.data.code
@@ -120,12 +117,10 @@ instance.interceptors.response.use(
   },
   (error) => {
     const response = error.response
-    store.commit('setLoading', false)
 
     switch (response.data.code) {
       case 301:
         // 为登录状态，显示登录dialog弹窗提示用户登录。
-        store.commit('setShowLogin', true)
         break
       case 401:
         // 401提示
