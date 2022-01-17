@@ -7,6 +7,7 @@ describe('create message', () => {
   const str = 'new message'
   it('add item into list', () => {
     mount(NewMessageForm)
+    // 也可以使用 自定义属性获取元素
     // get 选中 元素， type 输入数据
     cy.get('.input').type(str)
     // 点击触发按钮事件
