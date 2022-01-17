@@ -24,7 +24,6 @@ export default defineConfig({
         entryFileNames: 'js/[name]-[hash].js',
         assetFileNames: '[ext]/[name]-[hash].[ext]'
       }
-      //     // 配置CDN
     }
   },
   plugins: [vue()],
