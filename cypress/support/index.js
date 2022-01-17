@@ -15,6 +15,8 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+// 将chai 的写法 搞成jest
+import 'cypress-jest-adapter'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
