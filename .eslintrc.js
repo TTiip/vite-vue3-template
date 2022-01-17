@@ -19,6 +19,8 @@ module.exports = {
     withDefaults: "readonly"
   },
   rules: {
+    // 关闭没有定义会报错
+    'no-undef': 'off',
     // 关闭TS any检测
     '@typescript-eslint/no-explicit-any': ['off'],
     // 关闭TS 空函数检测
