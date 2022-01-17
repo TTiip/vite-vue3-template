@@ -4,6 +4,29 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  build: {
+    terserOptions: {
+      compress: {
+        // 生产环境时移除 console
+        drop_console: true,
+        // 生产环境时移除 debugger
+        drop_debugger: true
+      }
+    },
+    // 取消计算文件大小，加快打包速度
+    brotliSize: false,
+    // 是否需要 sourcemap 映射文件
+    sourcemap: false,
+    // assetsDir: 'static/img',
+    rollupOptions: {
+      output: {
+        chunkFileNames: 'js/[name]-[hash].js',
+        entryFileNames: 'js/[name]-[hash].js',
+        assetFileNames: '[ext]/[name]-[hash].[ext]'
+      }
+      //     // 配置CDN
+    }
+  },
   plugins: [vue()],
   resolve: {
     alias: [
