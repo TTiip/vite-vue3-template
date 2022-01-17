@@ -332,9 +332,6 @@ onMounted(() => {
   transform-origin: center;
 }
 .pinia-container-box {
-  height: calc(100vh);
-  display: flex;
-  align-items: center;
   .pinia-container {
     display: block;
     margin: auto;
