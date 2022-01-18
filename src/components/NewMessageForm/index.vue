@@ -16,18 +16,17 @@
   </div>
 </template>
 
-<script>
-</script>
+<script></script>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-const message = ref('')
-const emits = defineEmits(['send'])
+  import { ref } from 'vue'
+  const message = ref('')
+  const emits = defineEmits(['send'])
 
-const send = () => {
-  emits('send', message.value)
-  message.value = ''
-}
+  const send = () => {
+    emits('send', message.value)
+    message.value = ''
+  }
 </script>
 
 <style></style>

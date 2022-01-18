@@ -11,17 +11,17 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-import Layout from '@/components/Layout/index.vue'
-import PiniaLogo from '@/components/PiniaLogo.vue'
-import NewMessageForm from '@/components/NewMessageForm/index.vue'
-import NewMessageList from '@/components/NewMessageList/index.vue'
+  import { ref } from 'vue'
+  import Layout from '@/components/Layout/index.vue'
+  import PiniaLogo from '@/components/PiniaLogo.vue'
+  import NewMessageForm from '@/components/NewMessageForm/index.vue'
+  import NewMessageList from '@/components/NewMessageList/index.vue'
 
-const messages = ref<string[]>([])
+  const messages = ref<string[]>([])
 
-const handleSend = (msg: string) => {
-  messages.value.push(msg)
-}
+  const handleSend = (msg: string) => {
+    messages.value.push(msg)
+  }
 </script>
 
 <style scoped lang="less">

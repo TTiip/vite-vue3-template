@@ -12,9 +12,9 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
-	messages: string[]
-}>()
+  defineProps<{
+    messages: string[]
+  }>()
 </script>
 
 <style></style>
