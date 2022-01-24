@@ -1,0 +1,6 @@
+{
+	"addItem": {
+		"input": ".input",
+		"submit": ".btn"
+	}
+}
