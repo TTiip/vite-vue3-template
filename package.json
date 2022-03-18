@@ -7,19 +7,14 @@
     "serve": "vite --host && vue-tsc --noEmit --watch",
     "tsc": "vue-tsc --noEmit --watch",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview",
-    "test-ct": "cypress open-ct",
-    "test-e2e": "cypress open"
+    "preview": "vite preview"
   },
   "dependencies": {
     "axios": "^0.21.3",
-    "pinia": "^2.0.9",
     "vue": "^3.2.27",
-    "vue-router": "^4.0.0-0"
+    "vue-router": "^4.0.14"
   },
   "devDependencies": {
-    "@cypress/vite-dev-server": "^2.2.2",
-    "@cypress/vue": "^3.1.0",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
     "@vitejs/plugin-vue": "^2.0.1",
@@ -29,8 +24,6 @@
     "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/eslint-config-standard": "^5.1.2",
     "@vue/eslint-config-typescript": "^7.0.0",
-    "cypress": "8.0.0",
-    "cypress-jest-adapter": "^0.1.1",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",

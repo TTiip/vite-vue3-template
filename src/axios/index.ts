@@ -7,7 +7,6 @@ import axios, {
   AxiosResponse
 } from 'axios'
 import apiList, { apiKeyType, apiKeyDataType } from '@/api'
-import useMessage from '@/hooks/useMessage'
 
 type ResultDataType = apiKeyDataType[apiKeyType]
 /*
@@ -111,7 +110,7 @@ instance.interceptors.response.use(
 
     const code = response.data.code
     if (code !== 200) {
-      useMessage('error', response.data)
+      // 这里统一处理 不成功的信息
     }
     return response.data
   },
@@ -124,7 +123,7 @@ instance.interceptors.response.use(
         break
       case 401:
         // 401提示
-        useMessage('error', response.data.message)
+      // 这里统一处理 401 的信息
         break
       default:
         break
@@ -185,10 +184,9 @@ const httpFunc = <T extends apiKeyType>(
       headers: options.headers || {}
     })
       .then((res) => {
-        resolve(res)
+        resolve(res as any)
       })
       .catch((error) => {
-        // useMessage('error', error)
         reject(error)
       })
   })
