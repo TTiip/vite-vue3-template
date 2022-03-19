@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div
-      ref="'aaa"
+      ref="aaa"
       class="aaaa"
       @click="ddd"
     >
