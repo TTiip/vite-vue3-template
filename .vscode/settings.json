@@ -1,0 +1,65 @@
+{
+  "editor.accessibilitySupport": "off",
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontSize": 14,
+  "editor.guides.bracketPairs": "active",
+  "editor.inlineSuggest.enabled": true,
+  "editor.lineNumbers": "interval",
+  "editor.renderWhitespace": "boundary",
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  // "editor.formatOnSave": true,
+  "prettier.enable": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": false,
+    "source.fixAll.eslint": true, // this allows ESLint to auto fix on save
+    "source.organizeImports": false
+  },
+  "explorer.confirmDelete": true,
+  "explorer.confirmDragAndDrop": true,
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.editor.tabCloseButton": "left",
+  "workbench.iconTheme": "file-icons",
+  "workbench.list.smoothScrolling": true,
+  "workbench.sideBar.location": "right",
+  "workbench.tree.indent": 10,
+  "extensions.ignoreRecommendations": true,
+  "editor.cursorStyle": "line",
+  "editor.insertSpaces": false,
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "terminal.integrated.fontSize": 14,
+  "workbench.editor.splitInGroupLayout": "vertical",
+  "window.zoomLevel": 1,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.simpleDialog.enable": false,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "underline",
+  "terminal.integrated.fontWeight": "300",
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  "terminal.integrated.tabs.enabled": true,
+  // ESLint config: https://github.com/antfu/eslint-config
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "eslint.quiet": true,
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "vue",
+    "html"
+  ],
+  "css.lint.hexColorLength": "ignore",
+  "volar.autoCompleteRefs": true,
+  "volar.completion.preferredTagNameCase": "pascal",
+  "volar.takeOverMode.enabled": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "trailing-spaces.trimOnSave": true,
+  "javascript.format.semicolons": "remove",
+  "typescript.format.semicolons": "remove",
+  "terminal.integrated.defaultProfile.windows": "Command Prompt", // 去掉结尾空格
+
+}
