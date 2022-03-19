@@ -13,6 +13,7 @@
 <script lang="ts" setup>
   import Layout from '@/components/Layout/index.vue'
   import PiniaLogo from '@/components/PiniaLogo.vue'
+  //
   const ddd = () => {}
 
 </script>
