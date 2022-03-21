@@ -1,21 +1,12 @@
 <template>
   <Layout>
-    <div
-      ref="aaa"
-      class="aaaa"
-      @click="ddd"
-    >
-      <PiniaLogo />
-    </div>
+    <PiniaLogo />
   </Layout>
 </template>
 
 <script lang="ts" setup>
   import Layout from '@/components/Layout/index.vue'
   import PiniaLogo from '@/components/PiniaLogo.vue'
-  // test
-  const ddd = () => {}
-
 </script>
 
 <style scoped lang="less">
