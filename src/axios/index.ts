@@ -12,8 +12,7 @@ type ResultDataType = apiKeyDataType[apiKeyType]
 /*
   NewAxiosInstance接口得根据自己情况来定
   interceptors属性是必须要有，因为后续要用到拦截器
-  至于<T = any>(config: AxiosRequestConfig): AxiosPromise<T>这一段代码，因为我后续二次封装axios时采用的是此类型，所以我这里
-  声明的是这种数据类型
+  至于<T = any>(config: AxiosRequestConfig): AxiosPromise<T>这一段代码，因为我后续二次封装axios时采用的是此类型，所以我这里声明的是这种数据类型
 */
 
 interface NewAxiosInstance extends AxiosInstance {
