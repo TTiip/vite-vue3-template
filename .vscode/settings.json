@@ -32,7 +32,6 @@
   "editor.wordWrap": "off",
   "terminal.integrated.fontSize": 14,
   "workbench.editor.splitInGroupLayout": "vertical",
-  "window.zoomLevel": 1,
   "files.eol": "\n",
   "files.insertFinalNewline": true,
   "files.simpleDialog.enable": false,
