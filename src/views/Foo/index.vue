@@ -10,7 +10,14 @@
 </template>
 
 <script lang="ts" setup>
+  import axios from '@/axios'
   import { useUserStore } from '@/stores'
+
+  axios({
+    url: 'getSearchHot'
+  }).then(res => {
+    console.log(res.result.hots[1].iconType)
+  })
 
   const user = useUserStore()
   const changeUser = () => user.changeUser('test123')

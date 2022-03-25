@@ -9,8 +9,6 @@
 
 - 🦾 TypeScript, of course
 
-- ☁️ Deploy on Netlify, zero-config
-
 
 <br>
 
