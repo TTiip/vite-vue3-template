@@ -14,3 +14,15 @@
 
 
 ## Try it now!~
+
+### GitHub Template
+
+[Create a repo from this template on GitHub](https://github.com/TTiip/vite-vue3-template/generate).
+
+### Clone to local
+
+If you prefer to do it manually with the cleaner git history
+
+```bash
+npx degit https://github.com/TTiip/vite-vue3-template my-vite-app
+```
