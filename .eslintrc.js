@@ -4,52 +4,107 @@ module.exports = {
     node: true
   },
   extends: [
-    // 'plugin:vue/vue3-essential',
-    'plugin:vue/vue3-recommended',
-    '@vue/standard',
-    '@vue/typescript/recommended'
+    '@antfu'
   ],
   parserOptions: {
     ecmaVersion: 2020
   },
   globals: {
-    defineProps: "readonly",
-    defineEmits: "readonly",
-    defineExpose: "readonly",
-    withDefaults: "readonly"
+    defineProps: 'readonly',
+    defineEmits: 'readonly',
+    defineExpose: 'readonly',
+    withDefaults: 'readonly'
   },
   rules: {
-    // 关闭没有定义会报错
-    'no-undef': 'off',
-    // 关闭TS any检测
-    '@typescript-eslint/no-explicit-any': ['off'],
-    // 关闭TS 空函数检测
-    '@typescript-eslint/no-empty-function': ['off'],
-    // 关闭tab检测
+    // 关闭 let 转换成 const
+    'prefer-const': 'off',
+    // 强制使用 两个字符 缩进
+    'indent': ['error', 2, {
+      // switch case 开头的缩进 1 * 2
+      SwitchCase: 1
+    }],
+    // 函数参数 不使用换行
+    'function-paren-newline': ['error', 'never'],
+    // 函数左括号前一定要加 空格
+    'space-before-function-paren': ['error', 'always'],
+    // 当仅有一个判断的时候，必须使用 {} 包裹
+    'curly': ['error', 'all'],
+    // 花括号是不是换行
+    'object-curly-newline': ['error', {
+      ObjectExpression: {
+        // 多个换行
+        multiline: true,
+        // 超过或等于这个数量就换行
+        minProperties: 1
+      },
+      ObjectPattern: {
+        multiline: true,
+        minProperties: 1
+      },
+      ImportDeclaration: {
+        multiline: true,
+        minProperties: 2
+      },
+      ExportDeclaration: {
+        multiline: true,
+        minProperties: 2
+      }
+    }],
+    // 强制将对象的属性放在不同的行上
+    'object-property-newline': 'error',
+    // 不允许使用tab缩进
     'no-tabs': 'off',
-    // 关闭对象属性取用是必须是.的形式调用
-    'dot-notation': 'off',
-    // 关闭函数必须声明返回值
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    // require引入报错解决
-    '@typescript-eslint/no-var-requires': ['off'],
-    // 子组件修改父组件的值时报错提示
-    'vue/no-mutating-props': 'off',
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    // 不允许使用 console
+    'no-console': 'off',
+    // 不允许使用 debugger
+    'no-debugger': 'off',
+    // 禁止使用特定的语法
+    'no-restricted-syntax': 'off',
+    // typescript 关闭逗号检测
+    '@typescript-eslint/comma-dangle': 'off',
+    // 关闭缩进检测
+    '@typescript-eslint/indent': 'off',
+    // {} 括号和 else 换行风格。
+    '@typescript-eslint/brace-style': ['error', '1tbs', {
+      allowSingleLine: true
+    }],
     // script标签缩进设置
-    "vue/script-indent": ["error", 2, {
-      "baseIndent": 1,
-      "switchCase": 0,
-      "ignores": []
-    }]
-
+    'vue/script-indent': ['error', 2, {
+      baseIndent: 1
+    }],
+    // 逗号前面不要空格，后面必须空格
+    'comma-spacing': [
+      'error',
+      {
+        before: false,
+        after: true
+      }
+    ],
+    // 末尾逗号使用规则配置
+    'comma-dangle': [
+      'error',
+      {
+        arrays: 'never',
+        objects: 'never',
+        imports: 'never',
+        exports: 'never',
+        functions: 'never'
+      }
+    ],
+    // vue 文件 按照特定的顺序 排列 template script style
+    'vue/component-tags-order': [
+      'error',
+      {
+        order: ['template', 'script', 'style']
+      }
+    ]
   },
   overrides: [
     {
-      "files": ["*.vue"],
-      "rules": {
-        "indent": "off"
+      files: ['*.vue'],
+      // 关闭 vue 文件中的缩进检测
+      rules: {
+        indent: 'off'
       }
     }
   ]
