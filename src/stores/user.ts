@@ -9,7 +9,6 @@ export const useUserStore = defineStore({
     name: 'Eduardo',
     isAdmin: true
   }),
-
   actions: {
     changeUser (userName: string) {
       this.$state.name = userName
