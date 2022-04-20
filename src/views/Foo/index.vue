@@ -15,7 +15,7 @@
 
   // axios({
   //   url: 'getSearchHot'
-  // }).then((res) => {
+  // }).then(res => {
   //   console.log(res.result.hots[1].iconType)
   // })
 
