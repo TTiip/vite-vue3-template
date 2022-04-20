@@ -51,7 +51,10 @@ module.exports = {
       }
     }],
     // 强制将对象的属性放在不同的行上
-    'object-property-newline': 'error',
+    'object-property-newline': ['error', {
+      // 对象属性放在同一行(false 不换行) 但是不知道为什么不生效。。。
+      allowAllPropertiesOnSameLine: false
+    }],
     // 不允许使用tab缩进
     'no-tabs': 'off',
     // 不允许使用 console
